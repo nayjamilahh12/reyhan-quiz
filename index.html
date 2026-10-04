@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>For Reyhan ♡</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <div class="floating-hearts">
+    <span>♡</span>
+    <span>♡</span>
+    <span>♡</span>
+    <span>♡</span>
+    <span>♡</span>
+    <span>♡</span>
+  </div>
+
+  <main id="app">
+
+    <!-- HALAMAN 1 -->
+    <section class="page active" id="page1">
+      <div class="card password-card">
+        <div class="emoji">🌷</div>
+
+        <h1>Hi, Reyhan! ♡</h1>
+
+        <p>Masukin password dulu sebelum masuk yaa</p>
+
+        <h2>Inget tanggal lahir Amii ga?</h2>
+
+        <input
+          type="text"
+          id="password1"
+          placeholder="DDMMYYYY"
+          maxlength="8"
+        >
+
+        <button onclick="checkPassword(1)">
+          Buka ♡
+        </button>
+
+        <p class="error" id="error1"></p>
+      </div>
+    </section>
+
+
+    <!-- HALAMAN 2 -->
+    <section class="page" id="page2">
+      <div class="card password-card">
+        <div class="emoji">🎀</div>
+
+        <h1>Hmm... satu lagi!</h1>
+
+        <p>Kayaknya belum cukup satu password.</p>
+
+        <h2>Angka kesukaan Ami</h2>
+
+        <input
+          type="text"
+          id="password2"
+          placeholder="XXXXXX"
+          maxlength="6"
+        >
+
+        <button onclick="checkPassword(2)">
+          Lanjut ♡
+        </button>
+
+        <p class="error" id="error2"></p>
+      </div>
+    </section>
+
+
+    <!-- HALAMAN 3 -->
+    <section class="page" id="page3">
+      <div class="card puzzle-card">
+
+        <h1>Jigsaw Time! 🌼</h1>
+
+        <p>Susun bunga melati sampai gambarnya utuh.</p>
+
+        <div id="puzzle"></div>
+
+        <p id="puzzleMessage" class="success"></p>
+
+        <button id="puzzleNext" onclick="goToPage(4)" disabled>
+          Lanjut ♡
+        </button>
+
+      </div>
+    </section>
+
+
+    <!-- HALAMAN 4 -->
+    <section class="page" id="page4">
+
+      <div class="card letter-card">
+
+        <h1>Surat kecil buat kaka 💌</h1>
+
+        <div class="envelope" id="envelope">
+
+          <div class="envelope-body">
+            <div class="flap"></div>
+
+            <button class="heart-sticker" onclick="openLetter()">
+              ♥
+            </button>
+          </div>
+
+        </div>
+
+        <p id="letterHint">
+          Ketuk hati untuk membuka surat ♡
+        </p>
+
+        <div class="letter-content" id="letterContent">
+
+          <p>
+            Hi kaka! ini Ami. Ami bikin web ini khusus buat kaka,
+            kaka suka nda? Ami bikin web ini semaleman tau,
+            nge coding ulang juga ehehe.
+          </p>
+
+          <p>
+            Disini, Ami pengen ngasih kaka beberapa question random.
+            And, i hope u enjoy it.
+          </p>
+
+          <p>
+            Sorry ya kalo ada beberapa pertanyaan yang mungkin agak
+            asing atau.. so hard, maybe?
+            just for fun, okay?
+          </p>
+
+          <p>
+            let's start it! :)
+          </p>
+
+          <button onclick="goToPage(5)">
+            Tutup surat & lanjut ♡
+          </button>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- HALAMAN 20 -->
+    <section class="page" id="page20">
+
+      <div class="card lock-card">
+
+        <div class="lock">🔐</div>
+
+        <h1>Secret Lockpad</h1>
+
+        <p>
+          Ami punya puisi loh, tapi kaka harus tau kode nya.
+          Tanya Ami buat dapet kode nya ya :)
+        </p>
+
+        <div class="code-display" id="codeDisplay">
+          • • • • • •
+        </div>
+
+        <div class="number-pad">
+
+          <button onclick="pressNumber(1)">1</button>
+          <button onclick="pressNumber(2)">2</button>
+          <button onclick="pressNumber(3)">3</button>
+
+          <button onclick="pressNumber(4)">4</button>
+          <button onclick="pressNumber(5)">5</button>
+          <button onclick="pressNumber(6)">6</button>
+
+          <button onclick="pressNumber(7)">7</button>
+          <button onclick="pressNumber(8)">8</button>
+          <button onclick="pressNumber(9)">9</button>
+
+          <button onclick="clearCode()">⌫</button>
+          <button onclick="pressNumber(0)">0</button>
+          <button onclick="checkCode()">♡</button>
+
+        </div>
+
+        <p id="codeMessage"></p>
+
+      </div>
+
+    </section>
+
+
+    <!-- HALAMAN 21 -->
+    <section class="page" id="page21">
+
+      <div class="paper">
+
+        <div class="paper-decoration">✿</div>
+
+        <h1>SANG LUNA DAN BASKARA LANGIT</h1>
+
+        <div class="poem">
+
+          <p>
+            Dikala sang luna bersinar<br>
+            Layaknya sebuah permata malam<br>
+            Berkelip lembut dalam nirwana<br>
+            Bagai liontin sang dirgantara malam
+          </p>
+
+          <p>
+            Kala awan mulai redum<br>
+            Kidung angin terngiang dalam atma<br>
+            Bisikan sang bayu menusuk batin<br>
+            Siulan sang penjaga malam bergema
+          </p>
+
+          <p>
+            Ia berbisik, seolah memanggil<br>
+            Mencari secercah cahaya kehidupan<br>
+            Desis melodi jenggala bambu meruak<br>
+            Sandyakala perlahan datang menyapa
+          </p>
+
+          <p>
+            Ia, sang baskara mulai bersemi<br>
+            Terbit usai sang luna berlalu<br>
+            Membawa sanubari pada dirgantara<br>
+            Menuntun arah jalan pulang
+          </p>
+
+        </div>
+
+        <button onclick="goToPage(22)">
+          Lanjut ♡
+        </button>
+
+      </div>
+
+    </section>
+
+
+    <!-- HALAMAN 22 -->
+    <section class="page" id="page22">
+
+      <div class="card closing-card">
+
+        <div class="big-heart">♡</div>
+
+        <h1>Thank you, Reyhan! 🌷</h1>
+
+        <p>
+          Makasih udah mau menyelesaikan semua pertanyaan
+          random dari Ami.
+        </p>
+
+        <p>
+          Semoga web kecil ini bisa bikin kaka senyum,
+          walaupun cuma sebentar. ♡
+        </p>
+
+        <div class="stars">
+          ✦　♡　✦　♡　✦
+        </div>
+
+        <h2>— from Ami ♡</h2>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
